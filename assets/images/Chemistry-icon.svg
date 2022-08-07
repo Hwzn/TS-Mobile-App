@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="29.608" viewBox="0 0 24 29.608">
+  <g id="Chemistry-icon" transform="translate(-48.491)">
+    <g id="Group_3246" data-name="Group 3246" transform="translate(62.226 13.416)">
+      <g id="Group_3245" data-name="Group 3245">
+        <path id="Path_1116" data-name="Path 1116" d="M286.578,232a.578.578,0,1,0,.578.578A.579.579,0,0,0,286.578,232Z" transform="translate(-286 -232)"/>
+      </g>
+    </g>
+    <g id="Group_3248" data-name="Group 3248" transform="translate(59.912 9.947)">
+      <g id="Group_3247" data-name="Group 3247">
+        <path id="Path_1117" data-name="Path 1117" d="M246.578,172a.578.578,0,1,0,.578.578A.578.578,0,0,0,246.578,172Z" transform="translate(-246 -172)"/>
+      </g>
+    </g>
+    <g id="Group_3250" data-name="Group 3250" transform="translate(52.973 24.982)">
+      <g id="Group_3249" data-name="Group 3249">
+        <path id="Path_1118" data-name="Path 1118" d="M126.578,432a.578.578,0,1,0,.578.578A.578.578,0,0,0,126.578,432Z" transform="translate(-126 -432)"/>
+      </g>
+    </g>
+    <g id="Group_3252" data-name="Group 3252" transform="translate(48.491)">
+      <g id="Group_3251" data-name="Group 3251">
+        <path id="Path_1119" data-name="Path 1119" d="M71.965,23.575l-7.426-13.2v-7A1.735,1.735,0,0,0,63.96,0H57.021a1.735,1.735,0,0,0-.578,3.371v7l-7.426,13.2a4.048,4.048,0,0,0,3.528,6.033H68.437a4.048,4.048,0,0,0,3.528-6.033ZM57.525,10.808a.578.578,0,0,0,.074-.283V3.47h.578a.578.578,0,1,0,0-1.157H57.021a.578.578,0,0,1,0-1.157H63.96a.578.578,0,1,1,0,1.157H62.8a.578.578,0,1,0,0,1.157h.578v7.055a.578.578,0,0,0,.074.283l3.408,6.06A11.15,11.15,0,0,0,60.8,18.107a9.938,9.938,0,0,1-7.749.649ZM70.933,27.02a2.864,2.864,0,0,1-2.5,1.432H52.544a2.891,2.891,0,0,1-2.52-4.309l2.452-4.36a11.082,11.082,0,0,0,3.668.625q.277,0,.556-.014a11.228,11.228,0,0,0,4.633-1.26,9.984,9.984,0,0,1,6.233-1.017l3.389,6.025A2.864,2.864,0,0,1,70.933,27.02Z" transform="translate(-48.491)"/>
+      </g>
+    </g>
+    <g id="Group_3254" data-name="Group 3254" transform="translate(56.443 13.416)">
+      <g id="Group_3253" data-name="Group 3253">
+        <path id="Path_1120" data-name="Path 1120" d="M187.735,232a1.735,1.735,0,1,0,1.735,1.735A1.737,1.737,0,0,0,187.735,232Zm0,2.313a.578.578,0,1,1,.578-.578A.579.579,0,0,1,187.735,234.313Z" transform="translate(-186 -232)"/>
+      </g>
+    </g>
+    <g id="Group_3256" data-name="Group 3256" transform="translate(55.286 24.982)">
+      <g id="Group_3255" data-name="Group 3255">
+        <path id="Path_1121" data-name="Path 1121" d="M178.144,432H166.578a.578.578,0,1,0,0,1.157h11.566a.578.578,0,1,0,0-1.157Z" transform="translate(-166 -432)"/>
+      </g>
+    </g>
+  </g>
+</svg>

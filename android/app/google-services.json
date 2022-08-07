@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1064167231274",
+    "project_id": "ts-academy",
+    "storage_bucket": "ts-academy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064167231274:android:f1c2d23ddf398027bd1853",
+        "android_client_info": {
+          "package_name": "com.ts_academy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1064167231274-peq3d4p0bq7qhiln218v0konieaqa54o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ts_academy",
+            "certificate_hash": "89a62d5eeb9e29330ff0ff1257a87dd0924384c1"
+          }
+        },
+        {
+          "client_id": "1064167231274-f2m3r9lmni9fva8ddamuol4i2t7goc1d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmRpBezMK_4HoX165eYU_9KbGyd4qvchI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1064167231274-f2m3r9lmni9fva8ddamuol4i2t7goc1d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1064167231274-kjabjqho49kq1hcn24krrtcugbus17tp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tsacademy"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

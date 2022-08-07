@@ -1,0 +1,48 @@
+{
+  "identifier" : "2A2FD276",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "10.99",
+      "familyShareable" : false,
+      "internalID" : "D8321A81",
+      "localizations" : [
+        {
+          "description" : "One Session Online Course",
+          "displayName" : "One Session Course",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "info.tsacademy.app.session",
+      "referenceName" : "Session Course",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "30.99",
+      "familyShareable" : false,
+      "internalID" : "32536D0D",
+      "localizations" : [
+        {
+          "description" : "Multiple Sessions Course",
+          "displayName" : "Tutorial Course",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "info.tsacademy.app.tutorial",
+      "referenceName" : "Tutorial Course",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 1
+  }
+}
