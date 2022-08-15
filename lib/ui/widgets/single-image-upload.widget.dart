@@ -1,9 +1,7 @@
 import 'dart:io';
 
-import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 import 'package:rxdart/rxdart.dart';
@@ -145,62 +143,62 @@ class _SingleImageUploadState extends State<SingleImageUpload> {
     imageFile = await _picker.pickImage(source: ImageSource.gallery);
     if (imageFile != null) {
       state = AppState.picked;
-      await _cropImage();
+      // await _cropImage();
       setState(() {});
     }
   }
 
-  Future<void> _cropImage() async {
-    File croppedFile = await ImageCropper.cropImage(
-        sourcePath: imageFile.path,
-        aspectRatioPresets: Platform.isAndroid
-            ? [
-                CropAspectRatioPreset.square,
-                CropAspectRatioPreset.ratio3x2,
-                CropAspectRatioPreset.original,
-                CropAspectRatioPreset.ratio4x3,
-                CropAspectRatioPreset.ratio16x9
-              ]
-            : [
-                CropAspectRatioPreset.original,
-                CropAspectRatioPreset.square,
-                CropAspectRatioPreset.ratio3x2,
-                CropAspectRatioPreset.ratio4x3,
-                CropAspectRatioPreset.ratio5x3,
-                CropAspectRatioPreset.ratio5x4,
-                CropAspectRatioPreset.ratio7x5,
-                CropAspectRatioPreset.ratio16x9
-              ],
-        androidUiSettings: AndroidUiSettings(
-            toolbarTitle: AppLocalizations.of(context).get('Edit your Image'),
-            toolbarColor: AppColors.accentElement,
-            toolbarWidgetColor: AppColors.ternaryBackground,
-            dimmedLayerColor: AppColors.ternaryBackground.withOpacity(0.7),
-            initAspectRatio: CropAspectRatioPreset.original,
-            statusBarColor: AppColors.primaryColor,
-            showCropGrid: true,
-            backgroundColor: AppColors.primaryBackground,
-            lockAspectRatio: false),
-        iosUiSettings: IOSUiSettings(
-          title: AppLocalizations.of(context).get('Edit your Image'),
-        ));
-    if (croppedFile != null) {
-      imageFileCropper = croppedFile;
-      uploadImage();
-      state = AppState.cropped;
-      setState(() {});
-    }
-  }
+  // Future<void> _cropImage() async {
+  //   File croppedFile = await ImageCropper.cropImage(
+  //       sourcePath: imageFile.path,
+  //       aspectRatioPresets: Platform.isAndroid
+  //           ? [
+  //               CropAspectRatioPreset.square,
+  //               CropAspectRatioPreset.ratio3x2,
+  //               CropAspectRatioPreset.original,
+  //               CropAspectRatioPreset.ratio4x3,
+  //               CropAspectRatioPreset.ratio16x9
+  //             ]
+  //           : [
+  //               CropAspectRatioPreset.original,
+  //               CropAspectRatioPreset.square,
+  //               CropAspectRatioPreset.ratio3x2,
+  //               CropAspectRatioPreset.ratio4x3,
+  //               CropAspectRatioPreset.ratio5x3,
+  //               CropAspectRatioPreset.ratio5x4,
+  //               CropAspectRatioPreset.ratio7x5,
+  //               CropAspectRatioPreset.ratio16x9
+  //             ],
+  //       androidUiSettings: AndroidUiSettings(
+  //           toolbarTitle: AppLocalizations.of(context).get('Edit your Image'),
+  //           toolbarColor: AppColors.accentElement,
+  //           toolbarWidgetColor: AppColors.ternaryBackground,
+  //           dimmedLayerColor: AppColors.ternaryBackground.withOpacity(0.7),
+  //           initAspectRatio: CropAspectRatioPreset.original,
+  //           statusBarColor: AppColors.primaryColor,
+  //           showCropGrid: true,
+  //           backgroundColor: AppColors.primaryBackground,
+  //           lockAspectRatio: false),
+  //       iosUiSettings: IOSUiSettings(
+  //         title: AppLocalizations.of(context).get('Edit your Image'),
+  //       ));
+  //   if (croppedFile != null) {
+  //     imageFileCropper = croppedFile;
+  //     uploadImage();
+  //     state = AppState.cropped;
+  //     setState(() {});
+  //   }
+  // }
 
-  void uploadImage() {
-    ImageUplaod().uploadImageProfile(context, onSendProgress: (sent, total) {
-      progress.add((sent / total));
-    }, file: imageFileCropper).then((value) {
-      value.fold((err) => UI.toast('Error While Uploading'), (data) {
-        widget.form.control(widget.imageController).updateValue(data['id']);
-        setState(() {});
-        widget.afterUpload();
-      });
-    });
-  }
+  // void uploadImage() {
+  //   ImageUplaod().uploadImageProfile(context, onSendProgress: (sent, total) {
+  //     progress.add((sent / total));
+  //   }, file: imageFileCropper).then((value) {
+  //     value.fold((err) => UI.toast('Error While Uploading'), (data) {
+  //       widget.form.control(widget.imageController).updateValue(data['id']);
+  //       setState(() {});
+  //       widget.afterUpload();
+  //     });
+  //   });
+  // }
 }

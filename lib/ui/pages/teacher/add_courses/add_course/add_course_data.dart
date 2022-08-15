@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as Intl;
 import 'package:logger/logger.dart';
 import 'package:provider/provider.dart';
-import 'package:reactive_extended_text_field/reactive_extended_text_field.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 import 'package:ts_academy/core/models/course.dart';
 import 'package:ts_academy/core/services/localization/localization.dart';

@@ -138,8 +138,8 @@ class ProfileTabPage extends StatelessWidget {
                                     right: 0,
                                     child: InkWell(
                                       onTap: () async {
-                                        await model
-                                            .uploadImage(ImageSource.gallery);
+                                        // await model
+                                        //     .uploadImage(ImageSource.gallery);
                                       },
                                       highlightColor: AppColors.red,
                                       child: CircleAvatar(

@@ -1,4 +1,4 @@
-import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
+// import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ts_academy/ui/styles/colors.dart';
@@ -24,36 +24,37 @@ class CachedImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(radius),
-      child: FancyShimmerImage(
-        imageUrl: imageUrl,
-        boxFit: boxFit,
-        height: height,
-        shimmerBaseColor: AppColors.primaryColor,
-        shimmerHighlightColor: AppColors.secondaryElement.withOpacity(0.2),
-        shimmerBackColor: AppColors.accentElement,
-        width: width,
-        errorWidget: errorWidget ??
-            Image.asset(
-              'assets/images/appicon.png',
-              fit: BoxFit.contain,
-              height: height / 2,
-              width: width / 2,
-            ),
-      ),
-    );
-  }
-  // return FadeInImage(
-  //   placeholder: AssetImage('assets/images/logo.png'),
-  //   image: NetworkImage(imageUrl),
-  //   imageErrorBuilder:
-  //       (BuildContext context, Object exception, StackTrace stackTrace) {
-  //     return Text('Your error widget...');
-  //   },
-  //   height: height,
-  //   width: width,
-  //   fit: boxFit,
-  // );
+  //   return ClipRRect(
+  //     borderRadius: BorderRadius.circular(radius),
+  //     child:
+  //     FancyShimmerImage(
+  //       imageUrl: imageUrl,
+  //       boxFit: boxFit,
+  //       height: height,
+  //       shimmerBaseColor: AppColors.primaryColor,
+  //       shimmerHighlightColor: AppColors.secondaryElement.withOpacity(0.2),
+  //       shimmerBackColor: AppColors.accentElement,
+  //       width: width,
+  //       errorWidget: errorWidget ??
+  //           Image.asset(
+  //             'assets/images/appicon.png',
+  //             fit: BoxFit.contain,
+  //             height: height / 2,
+  //             width: width / 2,
+  //           ),
+  //     ),
+  //   );
   // }
+  return FadeInImage(
+    placeholder: AssetImage('assets/images/logo.png'),
+    image: NetworkImage(imageUrl),
+    imageErrorBuilder:
+        (BuildContext context, Object exception, StackTrace stackTrace) {
+      return Text('Your error widget...');
+    },
+    height: height,
+    width: width,
+    fit: boxFit,
+  );
+  }
 }

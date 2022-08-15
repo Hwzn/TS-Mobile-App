@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       Future.delayed(Duration(seconds: 2)).then((value) async {
-        await locator<PricingService>().getPricing();
+        // await locator<PricingService>().getPricing();
         locator<NotificationService>().init();
         AuthenticationService auth = locator<AuthenticationService>();
         if (auth.userLoged) {

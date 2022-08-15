@@ -95,41 +95,41 @@ class ProfileTabPageModel extends BaseNotifier {
 
   TextEditingController bioController = TextEditingController();
 
-  uploadImage(ImageSource imageSource) async {
-    final locale = AppLocalizations.of(context);
-    final pickedFile = await ImagePicker().pickImage(
-        source: imageSource, maxHeight: 800, maxWidth: 800, imageQuality: 80);
-    if (pickedFile != null) {
-      setState();
-      ImageUplaod().uploadImageProfile(context, onSendProgress: (sent, total) {
-        // progress.add((sent / total));
-      }, file: File(pickedFile.path)).then((value) {
-        value.fold((err) => UI.toast('Error While Uploading'), (data) async {
-          String path = data['id'];
-          bool result =
-              await auth.updateUserProfile(context, body: {'avatar': path});
-          if (result) {
-            var updatedUser = await api.myProfile(context);
-            if (updatedUser != null) {
-              updatedUser.fold((e) => ErrorWidget(e), (d) {
-                auth.saveUser(User.fromJson(d));
-              });
-              UI.showSnackBarMessage(
-                context: context,
-                message: locale.get("Avatar has been updated"),
-              );
-            }
-          } else {
-            UI.toast("Something went wrong please try again later.");
-          }
-          setIdle();
-          setState();
-        });
-      });
-    } else {
-      UI.toast(locale.get('No image selected') ?? "No image selected");
-    }
-  }
+  // uploadImage(ImageSource imageSource) async {
+  //   final locale = AppLocalizations.of(context);
+  //   final pickedFile = await ImagePicker().pickImage(
+  //       source: imageSource, maxHeight: 800, maxWidth: 800, imageQuality: 80);
+  //   if (pickedFile != null) {
+  //     setState();
+  //     ImageUplaod().uploadImageProfile(context, onSendProgress: (sent, total) {
+  //       // progress.add((sent / total));
+  //     }, file: File(pickedFile.path)).then((value) {
+  //       value.fold((err) => UI.toast('Error While Uploading'), (data) async {
+  //         String path = data['id'];
+  //         bool result =
+  //             await auth.updateUserProfile(context, body: {'avatar': path});
+  //         if (result) {
+  //           var updatedUser = await api.myProfile(context);
+  //           if (updatedUser != null) {
+  //             updatedUser.fold((e) => ErrorWidget(e), (d) {
+  //               auth.saveUser(User.fromJson(d));
+  //             });
+  //             UI.showSnackBarMessage(
+  //               context: context,
+  //               message: locale.get("Avatar has been updated"),
+  //             );
+  //           }
+  //         } else {
+  //           UI.toast("Something went wrong please try again later.");
+  //         }
+  //         setIdle();
+  //         setState();
+  //       });
+  //     });
+  //   } else {
+  //     UI.toast(locale.get('No image selected') ?? "No image selected");
+  //   }
+  // }
 
   Future<void> updateBio() async {
     String bio = bioController.text;
